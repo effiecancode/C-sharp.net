@@ -1,0 +1,15 @@
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.csproj.AssemblyReference.cache
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.AssemblyInfoInputs.cache
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.AssemblyInfo.cs
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.csproj.CoreCompileInputs.cache
+/Users/mac/c-sharp/AirBnB/bin/Debug/net7.0/AirBnB
+/Users/mac/c-sharp/AirBnB/bin/Debug/net7.0/AirBnB.deps.json
+/Users/mac/c-sharp/AirBnB/bin/Debug/net7.0/AirBnB.runtimeconfig.json
+/Users/mac/c-sharp/AirBnB/bin/Debug/net7.0/AirBnB.dll
+/Users/mac/c-sharp/AirBnB/bin/Debug/net7.0/AirBnB.pdb
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.dll
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/refint/AirBnB.dll
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.pdb
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/AirBnB.genruntimeconfig.cache
+/Users/mac/c-sharp/AirBnB/obj/Debug/net7.0/ref/AirBnB.dll
