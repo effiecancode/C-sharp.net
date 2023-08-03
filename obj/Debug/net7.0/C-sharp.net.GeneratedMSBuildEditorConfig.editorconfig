@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = AirBnB
-build_property.ProjectDir = /Users/mac/AllC#/C-sharp.net/AirBnB/
+build_property.RootNamespace = C_sharp.net
+build_property.ProjectDir = /Users/mac/AllC#/C-sharp.net/

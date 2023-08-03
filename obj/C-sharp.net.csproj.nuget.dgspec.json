@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/AllC#/C-sharp.net/AirBnB/AirBnB.csproj": {}
+    "/Users/mac/AllC#/C-sharp.net/C-sharp.net.csproj": {}
   },
   "projects": {
-    "/Users/mac/AllC#/C-sharp.net/AirBnB/AirBnB.csproj": {
+    "/Users/mac/AllC#/C-sharp.net/C-sharp.net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/AllC#/C-sharp.net/AirBnB/AirBnB.csproj",
-        "projectName": "AirBnB",
-        "projectPath": "/Users/mac/AllC#/C-sharp.net/AirBnB/AirBnB.csproj",
+        "projectUniqueName": "/Users/mac/AllC#/C-sharp.net/C-sharp.net.csproj",
+        "projectName": "C-sharp.net",
+        "projectPath": "/Users/mac/AllC#/C-sharp.net/C-sharp.net.csproj",
         "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/AllC#/C-sharp.net/AirBnB/obj/",
+        "outputPath": "/Users/mac/AllC#/C-sharp.net/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mac/.nuget/NuGet/NuGet.Config"
