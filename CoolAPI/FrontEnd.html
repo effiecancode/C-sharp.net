@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Consumer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            flex: 0 0 calc(50% - 10px);
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+            .card:hover {
+                transform: scale(1.02);
+            }
+
+            .card img {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+                object-fit: cover;
+            }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        label {
+            display: block;
+            margin-right: 10px;
+            font-weight: 500;
+            align-self: center;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"] {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #dataContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Name">
+        </div>
+
+        <div class="input-group">
+            <label for="dob">DOB:</label>
+            <input type="datetime-local" id="dob">
+        </div>
+
+        <div style="text-align: center;">
+            <button class="btn" id="fetchData">
+                <span class="material-icons">cloud_download</span>
+                Fetch Data
+            </button>
+        </div>
+        <div id="dataContainer"></div>
+    </div>
+
+    <script>document.getElementById('fetchData').addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const dateOfBirth = document.getElementById('dob').value;
+
+            // POST request
+            fetch('http://localhost:5016/student', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, dateOfBirth })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    return fetch('http://localhost:5016/student');
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const dataContainer = document.getElementById('dataContainer');
+                    dataContainer.innerHTML = '';
+
+                    data.forEach(student => {
+                        let card = document.createElement('div');
+                        card.className = 'card';
+                        card.innerHTML = `
+                            <img src="https://imagesvibe.com/wp-content/uploads/2023/05/Cute-Cat-Images11.jpg" alt="Student Photo"> <!-- Placeholder image -->
+                            <div class="card-content">
+                                <div><strong>ID:</strong> ${student.id}</div>
+                                <div><strong>Name:</strong> ${student.name}</div>
+                                <div><strong>DOB:</strong> ${student.dateOfBirth}</div>
+                            </div>
+                        `;
+                        dataContainer.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });</script>
+</body>
+
+</html>
